@@ -16,10 +16,10 @@ class block:
 class blockchain:
 	def __init__(self):
 		self.chain = [self.createGenesis()]
-
+        #creation of gensis block
 	def createGenesis(self):
 		return block(time.ctime(), "genesisBlock", "00000")
-
+                
 	def mineBlock(self, data):
 		node = block(time.ctime(), data, self.chain[-1].hash)
 		# mining a new block to the blockchain
